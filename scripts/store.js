@@ -32,7 +32,7 @@ const findAndUpdateName = function (id, newName) {
 
 const findAndDelete = function (id) {
     let changedItem = findById(id);
-    let i = this.items.findIndex(changedItem);
+    let i = items.findIndex(findItem => findItem === changedItem);
     this.items.splice(i, 1);
 };
 
