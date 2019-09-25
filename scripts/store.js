@@ -16,7 +16,7 @@ const addItem = function (name) {
 };
 
 const findAndToggleChecked = function (id) {
-    let changedItem = this.findById(id);
+    let changedItem = findById(id);
     changedItem.checked = !changedItem.checked;
 };
 
@@ -36,11 +36,16 @@ const findAndDelete = function (id) {
     this.items.splice(i, 1);
 };
 
+const toggleCheckedFilter = function() {
+    this.hideCheckedItems = !this.hideCheckedItems;
+};
+
 export default {
     items,
     hideCheckedItems,
     addItem,
     findAndToggleChecked,
     findAndUpdateName,
-    findAndDelete
+    findAndDelete,
+    toggleCheckedFilter
 };
